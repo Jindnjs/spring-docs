@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
     @PostMapping("/api/hello")
-    public ResponseEntity<String> hello(@RequestBody HelloRequestDto request) {
+    public ResponseEntity<String> hello(@CustomRequestBody HelloRequestDto request) {
         log.info("=== 컨트롤러 메서드 실행 ===");
         log.info("컨트롤러에서 받은 데이터: name={}, age={}", request.getName(), request.getAge());
         log.info("=== 컨트롤러 메서드 완료 ===");
