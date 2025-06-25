@@ -12,6 +12,16 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        show_sql: true
-        use_sql_comments: true
+#        show_sql: true
+#        use_sql_comments: true
         dialect: org.hibernate.dialect.MySQLDialect
+#        format_sql: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG                  # ?? ??? SQL
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE    # ???? ???? ?
