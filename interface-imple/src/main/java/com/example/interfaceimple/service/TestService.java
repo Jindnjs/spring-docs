@@ -11,10 +11,10 @@ public class TestService {
 
     private final TestRepository testRepository;
 
-    public int asdf(Test test) {
-        return testRepository.getInt();
-    }
+//    public int asdf(Test test) {
+//        return testRepository.getInt();
+//    }
     public int dsl(){
-        return testRepository.dslCount();
+        return testRepository.dslInt();
     }
 }
