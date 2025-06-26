@@ -11,7 +11,10 @@ public class TestService {
 
     private final TestRepository testRepository;
 
-    public Test save(Test test) {
-        return testRepository.save(test);
+    public int asdf(Test test) {
+        return testRepository.getInt();
+    }
+    public int dsl(){
+        return testRepository.dslCount();
     }
 }
