@@ -22,7 +22,7 @@ public class QTaskRepositoryImpl implements QTaskRepository {
     private final JPAQueryFactory jPAQueryFactory;
 
     @Override
-    public Page<TaskDto> findWithPage(Pageable pageable) {
+    public Page<TaskDto> findWithPageWith(Pageable pageable) {
         List<TaskDto> tasks = jPAQueryFactory
                 .select(
                         new QTaskDto(task.id, task.title)

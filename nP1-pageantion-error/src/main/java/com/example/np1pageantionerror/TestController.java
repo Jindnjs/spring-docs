@@ -17,13 +17,13 @@ public class TestController {
     private final TaskRepository taskRepository;
 
     @GetMapping("/api/tasks")
-    public Page<TaskDto> getTasks() {
+    public List<TaskDto> getTasks() {
         Pageable pageable = PageRequest.of(0, 5);
-        Page<TaskDto> tasksWithComments = taskRepository.findWithPage(pageable);
-//        List<Task> tasksWithComments = taskRepository.findTasksWithComments();
-//        List<TaskDto> collect = tasksWithComments.stream()
-//                .map(TaskDto::froms)
-//                .collect(Collectors.toList());
-        return tasksWithComments;
+//        Page<TaskDto> tasksWithComments = taskRepository.findWithPage(pageable);
+        Page<Task> tasksWithComments = taskRepository.findTasksWithComments(pageable);
+        return tasksWithComments.stream()
+                .map(TaskDto::froms)
+                .collect(Collectors.toList());
+        //return tasksWithComments;
     }
 }

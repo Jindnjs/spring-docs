@@ -5,5 +5,5 @@ import org.springframework.data.domain.Pageable;
 
 public interface QTaskRepository {
 
-    Page<TaskDto> findWithPage(Pageable pageable);
+    Page<TaskDto> findWithPageWith(Pageable pageable);
 }
