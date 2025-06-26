@@ -11,4 +11,6 @@ public interface TestRepository{
 
     int dslInt();
 
+    int jpqls();
+
 }

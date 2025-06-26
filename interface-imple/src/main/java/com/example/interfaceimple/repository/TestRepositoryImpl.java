@@ -11,6 +11,7 @@ public class TestRepositoryImpl implements TestRepository {
 
     private final TestJPARepository testJPQLRepository;
     private final TestQueryDslRepository testQueryDslRepository;
+    private final TestJPQLRepository jpqlRepository;
 
     @Override
     public int dslInt() {
@@ -20,5 +21,10 @@ public class TestRepositoryImpl implements TestRepository {
     @Override
     public Optional<String> findByEmail(String email) {
         return testJPQLRepository.findByEmail(email);
+    }
+
+    @Override
+    public int jpqls() {
+        return jpqlRepository.jpqls();
     }
 }
